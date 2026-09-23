@@ -394,8 +394,8 @@ dl.ref dd{margin:0;}
     <label class="tog"><input type="checkbox" id="tz2" checked><span class="sw" style="background:var(--z2)"></span>2. zona <span class="muted">(od studenog)</span></label>
     <h4 style="margin-top:10px">Legenda</h4>
     <div class="lg"><span class="sw" style="background:var(--ink-3)"></span>obojena ulica = ulica u kojoj se plaća</div>
-    <div class="lg"><span class="sw" style="background:transparent;border:2px dashed var(--ink-2);height:12px"></span>zgrade stanarskog područja</div>
-    <div class="lg"><span class="sw" style="background:var(--ink-2);height:12px"></span>parkirališta (ispuna)</div>
+    <div class="lg"><span class="sw" style="background:var(--ink-2);height:12px"></span>obojena površina = parkiralište u zoni</div>
+    <div class="lg"><span class="sw" style="background:transparent;border:2px dashed var(--ink-2);height:12px"></span>stanarsko područje — prikazuje se tek kad ga odabereš u kartici Stanari</div>
     <div class="lg"><span class="sw" style="background:var(--user);width:12px;height:12px;border-radius:50%"></span>tvoja lokacija</div>
   </div>
 
@@ -760,13 +760,12 @@ var lotsLayer=L.layerGroup();
 areaIds.forEach(function(id){ var z=areaZone(id);
   D.areas[id].parking.forEach(function(poly){ L.polygon(poly,{color:COL[z],weight:1.5,fillColor:COL[z],fillOpacity:.85,interactive:false}).addTo(lotsLayer); });
 });
-lotsLayer.addTo(map);
 var areaLayer=L.layerGroup().addTo(map);
 var markLayer=L.layerGroup().addTo(map);
 
 function showZones(show){
   [0,1,2].forEach(function(z){ (show&&zoneOn[z]) ? map.addLayer(zoneLayer[z]) : map.removeLayer(zoneLayer[z]); });
-  show ? map.addLayer(lotsLayer) : map.removeLayer(lotsLayer);
+  map.removeLayer(lotsLayer); // stanarska parkirališta samo za odabrano područje
 }
 
 /* ---------------------------------------------------------------
@@ -784,9 +783,6 @@ function segDist(p,a,b,lat0){ // metri
 var zone1Now={}; (D.zoneStreets.I||[]).forEach(function(s){ zone1Now[s.name]=true; });
 function zoneAt(ll){
   var p=[ll.lat,ll.lng];
-  // 1) unutar parkirališta?
-  for(var i=0;i<areaIds.length;i++){ var a=D.areas[areaIds[i]];
-    for(var j=0;j<a.parking.length;j++) if(inPoly(p,a.parking[j])) return {zone:areaZone(areaIds[i]), street:null, lot:true, d:0}; }
   // 2) unutar označene površine zone (parkiralište sa službene karte)
   var zs=["0","1","2"];
   for(var zi=0;zi<3;zi++){ var ar=(D.zoneAreas&&D.zoneAreas[zs[zi]])||[];
