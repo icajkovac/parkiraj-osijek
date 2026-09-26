@@ -1,0 +1,19 @@
+{
+  "name": "Parkiraj Osijek",
+  "short_name": "Parkiraj OS",
+  "description": "Neslužbeni vodič za parkiranje u Osijeku: zone, SMS plaćanje, stanarska područja.",
+  "lang": "hr",
+  "start_url": "./?izvor=pwa",
+  "scope": "./",
+  "id": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EEF3FA",
+  "theme_color": "#0F4FA0",
+  "categories": ["navigation", "travel", "utilities"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
