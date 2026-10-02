@@ -1,0 +1,39 @@
+Parkiraj Osijek — Licenca / Licence
+
+Copyright (c) 2026 Ivo Čajkovac. Sva prava pridržana. / All rights reserved.
+
+HRVATSKI
+Ovaj repozitorij i aplikacija "Parkiraj Osijek" (izvorni kod, dizajn, ilustracije, tekstovi, prijevodi te ucrtana
+geometrija zona, stanarskih područja i parkirališta) vlasništvo su autora, Ive Čajkovca.
+
+Dopušteno je isključivo osobno korištenje aplikacije u pregledniku na njezinoj službenoj adresi:
+https://parkirajhr.com/osijek/
+
+Bez prethodnog izričitog pisanog odobrenja autora ZABRANJENO je, u cijelosti ili djelomično: kopiranje, preuzimanje
+radi ponovne objave, umnožavanje, mijenjanje, izrada izvedenih djela ili "sličnih varijanti", objavljivanje na drugoj
+adresi, distribucija i komercijalno korištenje koda, dizajna ili podataka. Pravo pregleda koda koje pruža platforma
+GitHub ne daje pravo na kopiranje ili ponovno korištenje.
+
+Aplikacija je neslužbena i pruža se "kakva jest", bez ikakvog jamstva. Za naplatu su mjerodavni znakovi na terenu te
+službene odluke i cjenik Grada Osijeka i GPP-a.
+
+Komponente trećih strana zadržavaju vlastite licence i nisu obuhvaćene ovom licencom: Leaflet (js/leaflet.js,
+js/LICENSE-leaflet.txt), fontovi (fonts/LICENSE-*.txt), podloga karte Esri i geometrija ulica © OpenStreetMap suradnici.
+
+ENGLISH
+This repository and the "Parkiraj Osijek" app (source code, design, illustrations, texts, translations and the drawn
+geometry of zones, resident areas and car parks) are the property of the author, Ivo Čajkovac.
+
+Only personal use of the app in a web browser at its official address is permitted:
+https://parkirajhr.com/osijek/
+
+Without the author's prior express written permission it is PROHIBITED, in whole or in part, to copy, download for
+republication, reproduce, modify, create derivative works or "similar variants", publish at another address, distribute
+or use commercially the code, design or data. The ability to view code granted by the GitHub platform does not grant the
+right to copy or reuse it.
+
+The app is unofficial and provided "as is" without warranty of any kind. Signs on site and the official decisions and
+price list of the City of Osijek and GPP are authoritative for charging.
+
+Third-party components keep their own licences and are not covered by this licence: Leaflet (js/leaflet.js,
+js/LICENSE-leaflet.txt), fonts (fonts/LICENSE-*.txt), Esri map tiles and street geometry © OpenStreetMap contributors.

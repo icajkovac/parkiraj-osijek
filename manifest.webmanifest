@@ -1,0 +1,17 @@
+{
+  "name": "Parkiraj Osijek",
+  "short_name": "Parkiraj OS",
+  "description": "Aplikacija je preselila na parkirajhr.com/osijek",
+  "lang": "hr",
+  "start_url": "./?izvor=pwa",
+  "scope": "./",
+  "id": "./",
+  "display": "standalone",
+  "background_color": "#174596",
+  "theme_color": "#174596",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
